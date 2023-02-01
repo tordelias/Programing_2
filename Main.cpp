@@ -187,12 +187,12 @@ void AMain::WinChecker()
 		RedWin = true;
 		UE_LOG(LogTemp, Warning, TEXT("BlueWins"));
 	}
-	if (SphereR[0] + SphereR[1] + SphereR[2] == 6 || SphereR[0] + SphereR[5] + SphereR[8] == 6 || SphereR[0] + SphereR[3] + SphereR[6] == 6 || SphereR[2] + SphereR[4] + SphereR[6] == 6 || SphereR[3] + SphereR[4] + SphereR[5] == 6 || SphereR[6] + SphereR[7] + SphereR[8] == 6 || SphereR[1] + SphereR[4] + SphereR[5] == 6 || SphereR[2] + SphereR[5] + SphereR[8] == 6)
+	if (SphereR[0] + SphereR[1] + SphereR[2] == 6 || SphereR[0] + SphereR[4] + SphereR[8] == 6 || SphereR[0] + SphereR[3] + SphereR[6] == 6 || SphereR[2] + SphereR[4] + SphereR[6] == 6 || SphereR[3] + SphereR[4] + SphereR[5] == 6 || SphereR[6] + SphereR[7] + SphereR[8] == 6 || SphereR[1] + SphereR[4] + SphereR[5] == 6 || SphereR[2] + SphereR[5] + SphereR[8] == 6)
 	{
 		RedWin = true;
 		UE_LOG(LogTemp, Warning, TEXT("RedWins"));
 	}
-	if (TurnCounter == 9)
+	if (TurnCounter == 9 && RedWin != true)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Draw"));
 		RedWin = true;
